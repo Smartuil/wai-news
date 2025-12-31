@@ -17,15 +17,15 @@
 
 <p align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://zdoc.app/de/Smartuil/awesome-websites">Deutsch</a> | 
-  <a href="https://zdoc.app/en/Smartuil/awesome-websites">English</a> | 
-  <a href="https://zdoc.app/es/Smartuil/awesome-websites">Español</a> | 
-  <a href="https://zdoc.app/fr/Smartuil/awesome-websites">français</a> | 
-  <a href="https://zdoc.app/ja/Smartuil/awesome-websites">日本語</a> | 
-  <a href="https://zdoc.app/ko/Smartuil/awesome-websites">한국어</a> | 
-  <a href="https://zdoc.app/pt/Smartuil/awesome-websites">Português</a> | 
-  <a href="https://zdoc.app/ru/Smartuil/awesome-websites">Русский</a> | 
-  <a href="https://zdoc.app/zh/Smartuil/awesome-websites">中文</a>
+  <a href="https://zdoc.app/de/Smartuil/wai-news">Deutsch</a> | 
+  <a href="https://zdoc.app/en/Smartuil/wai-news">English</a> | 
+  <a href="https://zdoc.app/es/Smartuil/wai-news">Español</a> | 
+  <a href="https://zdoc.app/fr/Smartuil/wai-news">français</a> | 
+  <a href="https://zdoc.app/ja/Smartuil/wai-news">日本語</a> | 
+  <a href="https://zdoc.app/ko/Smartuil/wai-news">한국어</a> | 
+  <a href="https://zdoc.app/pt/Smartuil/wai-news">Português</a> | 
+  <a href="https://zdoc.app/ru/Smartuil/wai-news">Русский</a> | 
+  <a href="https://zdoc.app/zh/Smartuil/wai-news">中文</a>
 </p>
 
 ## 预览
@@ -112,6 +112,7 @@ src/
   <img src="https://unrealenginelibrary-1252512735.cos.ap-guangzhou.myqcloud.com/image/ecfbdb054f5f49d5392c5526e23ec43b.png" width="45%" />
   <img src="https://unrealenginelibrary-1252512735.cos.ap-guangzhou.myqcloud.com/image/10ecab65182fc7bf4453b5a16c206fe5.jpg" width="45%" />
 </p>
+
 ## License
 
 [MPL-2.0](./LICENSE)

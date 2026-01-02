@@ -28,6 +28,19 @@ const onSelect = (option: IOption, index: number) => {
   }
   emit('update:modelValue', option.value)
 }
+
+const getModeTooltip = (mode: Mode): string => {
+  switch (mode) {
+    case Mode.Soft:
+      return '轻微旋转页面，保持舒适的视觉效果'
+    case Mode.Continuous:
+      return '持续交替旋转，动态的页面体验'
+    case Mode.Full:
+      return '随机旋转角度，充满变化的效果'
+    default:
+      return ''
+  }
+}
 </script>
 
 <template>
@@ -38,6 +51,7 @@ const onSelect = (option: IOption, index: number) => {
         :key="option.value"
         :class="{ selected: index === selectedIndex }"
         @click="onSelect(option, index)"
+        :title="getModeTooltip(option.value)"
       >
         {{ option.label }}
       </li>

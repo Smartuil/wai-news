@@ -7,7 +7,27 @@ import type { IContentBaseProps } from '../types'
 const props = defineProps<IContentBaseProps>()
 const { isDayOff } = useTodayInfoApi(props.date)
 const { name, rest } = useNextHolidayApi(props.date)
+
+function formatBuildTimeToBeijing(iso: string): string {
+  if (!iso) return ''
+
+  const dateUtc = new Date(iso)
+  if (Number.isNaN(dateUtc.getTime())) return ''
+
+  const beijingMs = dateUtc.getTime() + 8 * 60 * 60 * 1000
+  const d = new Date(beijingMs)
+  const pad = (n: number) => String(n).padStart(2, '0')
+
+  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(
+    d.getUTCHours(),
+  )}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`
+}
+
+const buildTime: string = formatBuildTimeToBeijing(__BUILD_TIME__)
 </script>
+
+
+
 
 <template>
   <section id="datetime">
@@ -24,7 +44,11 @@ const { name, rest } = useNextHolidayApi(props.date)
       >还有<span class="hightlight">{{ rest }}</span
       >天
     </p>
+    <p v-if="buildTime" class="news-update">
+      新闻更新时间：<span class="hightlight">{{ buildTime }}</span>
+    </p>
   </section>
+
 </template>
 
 <style scoped>
@@ -32,6 +56,11 @@ p {
   margin: 4px;
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+.news-update {
+  margin-top: 12px;
+  font-size: 1.5rem;
 }
 
 .hightlight {
@@ -51,3 +80,4 @@ p {
   line-height: 1.2;
 }
 </style>
+
